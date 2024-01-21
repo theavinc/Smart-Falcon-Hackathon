@@ -60,16 +60,16 @@ It is built by primarily using
 
 # PROCEDURE:
  # step 1: To setup Hyperledger Fabric Test Network
-use the below commands:-
+use the commands:-
  ./network.sh down
  ./network.sh up
 
 # step 2: Package and Deploy the chain code into fabric test network 
-use the below command:-
+use the command:-
  ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go
 
 # step 3: Develop Hyperledger Fabric Chaincode
-use the below command:-
+use the command:-
  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"InitLedger","Args":[]}'
 
  # step 4: Test the chain code functionality using Fabric Peer CLI commands
