@@ -46,10 +46,10 @@ type HistoryQueryResult struct {
 // InitLedger adds a base set of assets to the ledger
 func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface) error {
 	assets := []Asset{
-		{DealerID: "Asset1", MSISDN: 10, MPIN: 1024, Balance: 100000.9, Status: "active", TransAmount:0.0 ,TransType: "" ,Remarks:"initial deposit"},
-		{DealerID: "Asset2", MSISDN:11, MPIN: 2048, Balance: 56000.6, Status: "active", TransAmount:0.0 ,TransType: "",Remarks:"intial deposit"},
-		{DealerID: "Asset3", MSISDN: 12, MPIN: 0507, Balance: 230000.8, Status: "active", TransAmount:0.0 ,TransType: "" ,Remarks:"initial deposit"},
-		{DealerID: "Asset4", MSISDN: 13, MPIN: 7557, Balance: 576000.1, Status: "active", TransAmount:0.0 ,TransType: "",Remarks:"intial deposit"},
+		{DealerID: "Asset1", MSISDN: 20, MPIN: 2991, Balance: 130000.9, Status: "active", TransAmount:0.0 ,TransType: "" ,Remarks:"initial deposit"},
+		{DealerID: "Asset2", MSISDN:21, MPIN: 3002, Balance: 56400.6, Status: "active", TransAmount:0.0 ,TransType: "",Remarks:"intial deposit"},
+		{DealerID: "Asset3", MSISDN: 22, MPIN: 0597, Balance: 30000.8, Status: "active", TransAmount:0.0 ,TransType: "" ,Remarks:"initial deposit"},
+		{DealerID: "Asset4", MSISDN: 23, MPIN: 4778, Balance: 536000.1, Status: "active", TransAmount:0.0 ,TransType: "",Remarks:"intial deposit"},
 	}
 
 	for _, asset := range assets {
